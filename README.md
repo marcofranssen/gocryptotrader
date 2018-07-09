@@ -126,6 +126,16 @@ copy %GOPATH%\src\github.com\thrasher-\gocryptotrader\config_example.json %GOPAT
 + Make any neccessary changes to the `config.json` file.
 + Run the `gocryptotrader` binary file inside your GOPATH bin folder.
 
+### Config
+
+In order to update the available trading pairs in the config there is a small tool available currently for binance.
+It retrieves all the available trading pairs and prints them to console. Simply copy paste the output into your config.json
+to have an updated trading pairs config.
+
+```
+go build tools/symbols/binance.go && binance.exe
+```
+
 ## Donations
 
 <img src="https://github.com/thrasher-/gocryptotrader/blob/master/web/src/assets/donate.png?raw=true" hspace="70">
@@ -171,6 +181,3 @@ Binaries will be published once the codebase reaches a stable condition.
 | askew- | https://github.com/askew- | 1 |
 | whilei | https://github.com/whilei | 1 |
 | snipesjr | https://github.com/snipesjr | 1 |
-
-
-

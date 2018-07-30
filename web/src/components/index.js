@@ -9,6 +9,9 @@ export {
 export {
   default as WebserverSettings
 } from './WebserverSettings/WebserverSettings.js';
+export {
+  default as ExchangesSettings
+} from './ExchangesSettings/ExchangesSettings.js';
 export { default as EmptyState } from './EmptyState/EmptyState.js';
 export { default as SecretInput } from './SecretInput/SecretInput.js';
 export { default as withFetching } from './WithFetching/WithFetching.js';

@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import { withStyles } from '@material-ui/core/styles';
-import { EmptyState, WebserverSettings, withFetching } from '../../components';
+import { EmptyState, WebserverSettings, ExchangesSettings, withFetching } from '../../components';
 import { pageStyles } from '../styles';
 
 const styles = theme => ({
@@ -41,15 +41,9 @@ const configGroups = [
   {
     heading: {
       primary: 'Exchanges',
-      secondary: '...'
+      secondary: 'exchange settings and options',
     },
-    details: props => (
-      <textarea
-        readOnly
-        className={props.classes.json}
-        value={JSON.stringify(props.data.exchanges, null, 2)}
-      />
-    )
+    details: props => <ExchangesSettings data={props.data.exchanges} />
   },
   {
     heading: {

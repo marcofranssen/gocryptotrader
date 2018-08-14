@@ -56,7 +56,7 @@ class Home extends Component {
               <EmptyState data={data} error={error} isLoading={isLoading} />
             </Fragment>
           ) : (
-            <CandlestickChart type="hybrid" width={500} data={data} />
+            <CandlestickChart type="hybrid" data={data} />
           )}
         </Paper>
       </div>

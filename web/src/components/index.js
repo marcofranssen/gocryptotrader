@@ -12,3 +12,4 @@ export {
 export { default as EmptyState } from './EmptyState/EmptyState.js';
 export { default as SecretInput } from './SecretInput/SecretInput.js';
 export { default as withFetching } from './WithFetching/WithFetching.js';
+export { default as CandlestickChart } from './CandlestickChart/CandlestickChart.js';

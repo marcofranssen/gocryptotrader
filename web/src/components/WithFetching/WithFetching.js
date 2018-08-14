@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const withFetching = url => WrappedComponent =>
+const withFetching = (url, fetchOptions) => WrappedComponent =>
   class WithFetching extends Component {
     constructor(props) {
       super(props);
@@ -19,7 +19,11 @@ const withFetching = url => WrappedComponent =>
       }
       try {
         const response = await fetch(url);
-        const data = await response.json();
+
+        const data =
+          fetchOptions && typeof fetchOptions.parser === 'function'
+            ? await fetchOptions.parser(response)
+            : await response.json();
 
         if (this.mounted) {
           this.setState(prevState => ({
